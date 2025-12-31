@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Get Franchise 🤝 | Esro Kids - Partner with Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #ffce3a;
+      --secondary: #7f5dff;
+      --accent: #ff6fb5;
+      --dark: #050b2b;
+      --light: #fdf6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #1b2a6b, #050b2b 55%, #02030f);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 11, 43, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.5rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #ffffff, #ffce3a 40%, #ff6fb5 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 18px rgba(255, 206, 58, 0.7);
+    }
+
+    .logo span {
+      display: block;
+      line-height: 1.1;
+    }
+
+    .logo-main {
+      font-size: 1.2rem;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      font-weight: 400;
+      opacity: 0.85;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ffce3a, #ff6fb5);
+      color: #050b2b;
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(255, 111, 181, 0.6);
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    /* Page header */
+    .page-header {
+      position: relative;
+      overflow: hidden;
+      padding: 2rem 1.25rem 1.5rem;
+    }
+
+    .page-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header .highlight {
+      background: linear-gradient(135deg, #ffce3a, #ff6fb5);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .stars {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(2px 2px at 15% 25%, rgba(255, 255, 255, 0.8) 0, transparent 50%),
+        radial-gradient(1.5px 1.5px at 85% 35%, rgba(255, 255, 255, 0.7) 0, transparent 50%),
+        radial-gradient(1.2px 1.2px at 40% 85%, rgba(255, 255, 255, 0.6) 0, transparent 50%),
+        radial-gradient(1.8px 1.8px at 70% 70%, rgba(255, 255, 255, 0.9) 0, transparent 50%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2.5rem;
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* Benefits sidebar */
+    .benefits-section {
+      position: sticky;
+      top: 90px;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .benefit-card {
+      background: rgba(5, 11, 43, 0.7);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      margin-bottom: 0.8rem;
+    }
+
+    .benefit-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .benefit-card p {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(127, 93, 255, 0.2), rgba(255, 111, 181, 0.2));
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    .highlight-box h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box ul {
+      list-style: none;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .highlight-box li::before {
+      content: "✨ ";
+      margin-right: 0.3rem;
+    }
+
+    /* Form section */
+    .form-section {
+      background: rgba(5, 11, 43, 0.7);
+      border-radius: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 1.8rem;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+
+    .required {
+      color: #ff6fb5;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border-radius: 0.6rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: border 0.2s, background 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #ffce3a;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      font-size: 0.82rem;
+      margin-bottom: 0;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #ffce3a, #ff6fb5);
+      color: #050b2b;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(255, 111, 181, 0.6);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.65);
+      margin-top: 0.8rem;
+      text-align: center;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(5, 11, 43, 0.95);
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.7rem;
+      align-items: center;
+      flex-wrap: wrap;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-size: 0.78rem;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 860px) {
+      .content-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .benefits-section {
+        position: static;
+      }
+    }
+
+    @media (max-width: 620px) {
+      nav ul {
+        display: none;
+      }
+
+      .form-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⭐</div>
+        <span>
+          <span class="logo-main">Esro Kids</span>
+          <span class="logo-sub">Montessori • Kindergarten • Day Care</span>
+        </span>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">🏠 Home</a></li>
+          <li><a href="about.html">🌈 About</a></li>
+          <li><a href="franchise.html">🤝 Get Franchise</a></li>
+          <li><a href="locate.html">📍 Locate Us</a></li>
+          <li><a href="gallery.html">🪐 Gallery</a></li>
+          <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html">
+        <button class="btn-primary">Enroll Now ✨</button>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="stars"></div>
+    <div class="page-header-inner">
+      <h1>Become an <span class="highlight">Esro Kids Partner 🤝</span></h1>
+      <p>
+        Join India's fastest-growing space-themed early education brand and bring the joy of Montessori learning to your city. Let's build the future together, one little astronaut at a time! 🚀
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <div class="content-wrapper">
+      <!-- Benefits Sidebar -->
+      <aside class="benefits-section">
+        <h2 class="section-title">
+          <span>✨</span>
+          <span>Why partner with us?</span>
+        </h2>
+
+        <div class="benefit-card">
+          <h3>🎯 Proven business model</h3>
+          <p>
+            A tested and profitable franchise system with comprehensive operational guidelines, marketing support, and continuous training.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>🌟 Unique brand identity</h3>
+          <p>
+            Stand out with our space-themed curriculum, attractive campuses, and joyful learning philosophy that parents love.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>📚 Complete curriculum & training</h3>
+          <p>
+            Ready-to-use Montessori-inspired curriculum, teacher training programs, and ongoing academic support from our expert team.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>🎨 Marketing & branding</h3>
+          <p>
+            Professionally designed marketing materials, social media assets, enrollment campaigns, and brand guidelines to help you grow.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>🤝 End-to-end support</h3>
+          <p>
+            From site selection and setup to daily operations and parent engagement—we're with you every step of the way.
+          </p>
+        </div>
+
+        <div class="highlight-box">
+          <h3>🚀 What you get:</h3>
+          <ul>
+            <li>Franchise license & brand rights</li>
+            <li>Site setup & interior design support</li>
+            <li>Comprehensive teacher training</li>
+            <li>Curriculum & activity materials</li>
+            <li>Marketing & enrollment support</li>
+            <li>Ongoing operational guidance</li>
+            <li>Parent engagement tools</li>
+            <li>Quality assurance visits</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Franchise Form -->
+      <div class="form-section">
+        <h2>Franchise Application Form 📝</h2>
+        <p class="form-subtitle">
+          Fill out the form below and our franchise team will get in touch with you within 48 hours to discuss the opportunity in detail.
+        </p>
+
+        <form id="franchiseForm" action="#" method="POST">
+          <!-- Personal Information -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210" />
+            </div>
+
+            <div class="form-group">
+              <label for="city">City <span class="required">*</span></label>
+              <input type="text" id="city" name="city" required placeholder="Your city" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="state">State <span class="required">*</span></label>
+            <select id="state" name="state" required>
+              <option value="">-- Select State --</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+
+          <!-- Business Background -->
+          <div class="form-group">
+            <label for="experience">Do you have prior experience in education or childcare? <span class="required">*</span></label>
+            <select id="experience" name="experience" required>
+              <option value="">-- Select --</option>
+              <option value="Yes - Education">Yes, in education sector</option>
+              <option value="Yes - Childcare">Yes, in childcare/preschool</option>
+              <option value="Yes - Other">Yes, in other business</option>
+              <option value="No">No, this will be my first venture</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="investment">Estimated investment capacity (INR) <span class="required">*</span></label>
+            <select id="investment" name="investment" required>
+              <option value="">-- Select Range --</option>
+              <option value="5-10 Lakhs">₹5 - 10 Lakhs</option>
+              <option value="10-15 Lakhs">₹10 - 15 Lakhs</option>
+              <option value="15-25 Lakhs">₹15 - 25 Lakhs</option>
+              <option value="25-50 Lakhs">₹25 - 50 Lakhs</option>
+              <option value="50+ Lakhs">₹50 Lakhs+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="spaceAvailable">Do you have a suitable property/space? <span class="required">*</span></label>
+            <select id="spaceAvailable" name="spaceAvailable" required>
+              <option value="">-- Select --</option>
+              <option value="Yes - Owned">Yes, I own a suitable property</option>
+              <option value="Yes - Rented">Yes, I have identified a rental property</option>
+              <option value="No - Need Help">No, I need help finding a space</option>
+              <option value="Exploring">Still exploring options</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="timeline">When do you plan to launch? <span class="required">*</span></label>
+            <select id="timeline" name="timeline" required>
+              <option value="">-- Select Timeline --</option>
+              <option value="Within 3 months">Within 3 months</option>
+              <option value="3-6 months">3 to 6 months</option>
+              <option value="6-12 months">6 to 12 months</option>
+              <option value="More than 12 months">More than 12 months</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell us why you want to partner with Esro Kids</label>
+            <textarea id="message" name="message" placeholder="Share your motivation, vision, and any questions you have..."></textarea>
+          </div>
+
+          <!-- Terms & Conditions -->
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              I agree to the terms and conditions and consent to being contacted by the Esro Kids franchise team. <span class="required">*</span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">
+            Submit Application 🚀
+          </button>
+
+          <p class="form-note">
+            Your information is secure and will only be used for franchise-related communication.
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Esro Kids • A joyful space for little learners 🚀</span>
+
+      <div class="footer-nav">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Form submission handler
+    document.getElementById("franchiseForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      // Here you would typically send the form data to your server
+      // For now, we'll just show an alert
+      alert("Thank you for your interest in Esro Kids franchise! 🚀\n\nOur team will contact you within 48 hours to discuss the opportunity further.");
+      
+      // Optionally reset the form
+      // this.reset();
+    });
+  </script>
+</body>
+</html>
